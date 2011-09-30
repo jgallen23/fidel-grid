@@ -1,20 +1,14 @@
 {
   "JAVASCRIPT": {
     "DIST_DIR": "./dist/",
-    "fidel.module": [
+    "fidel-grid": [
       "./lib/copyright.js",
-      "./lib/modal.js"
+      "./lib/grid.js"
     ],
-    "fidel.module.full": [
+    "fidel-grid-full": [
       "./lib/copyright.js",
       "./vendor/fidel.js",
-      "./lib/modal.js"
-    ]
-  },
-  "CSS": {
-    "DIST_DIR": "./dist/",
-    "fidel.module": [
-      "./stylesheets/copyright.css"
+      "./lib/grid.js"
     ]
   },
   "JSHINT_OPTS": {
@@ -27,7 +21,7 @@
     "regexp": false,
     "undef": false,
     "sub": true,
-    "white": true,
+    "white": false,
     "indent": 2,
     "whitespace": true,
     "asi": true

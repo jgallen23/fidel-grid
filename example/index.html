@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title></title>
+		<script src="jquery.min.js"></script>
+		<script src="live.js"></script>
+		<script src="str.js"></script>
+		<script src="../vendor/fidel.js"></script>
+		<script src="../lib/grid.js"></script>
+		<style>
+			#grid .item{padding:10px;margin:10px;box-shadow:0 0 5px #000;border-radius:10px;}
+		</style>
+	</head>
+	<body>
+		<script type="text/template" id="tmpGrid">
+			{! for (var i = 0; i < max; i++) { !}
+				<div class="item" data-element="item">
+					<img src="http://placehold.it/250x{!= rnd() !}"/>
+				</div>
+			{! } !}
+		</script>
+		<div id="grid"></div>
+		<script>
+			//just for demo purposes
+			var data = {
+				max: 50,
+				rnd: function() {
+					var to = 300;
+					var from = 100;
+					return Math.floor(Math.random() * (to - from + 1) + from);
+				}
+			}
+			var tmp = str.template($("#tmpGrid").html(), data);
+			$("#grid").html(tmp);
+
+
+			var grid = new Fidel.Grid({ el: $("#grid"), paddingX: 20, paddingY: 30 });
+		</script>
+	</body>
+</html>

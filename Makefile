@@ -1,6 +1,5 @@
 boosh:
 	smoosh make ./build.json
-	cp ui/* dist/
 
 clean:
 	rm -rf dist
